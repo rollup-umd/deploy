@@ -1,10 +1,14 @@
 import {
+  builder,
   command,
   desc,
   handler,
 } from '../deploy';
 
 describe('deploy', () => {
+  it('builder should be defined', () => {
+    expect(builder).toBeDefined();
+  });
   it('command should be defined', () => {
     expect(command).toBeDefined();
   });
