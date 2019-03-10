@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/rollup-umd/deploy/compare/v1.0.3...v1.0.4) (2019-03-10)
+
+
+### Bug Fixes
+
+* **deploy:** fixing --target-version ([e4bb28e](https://github.com/rollup-umd/deploy/commit/e4bb28e))
+
 ## [1.0.3](https://github.com/rollup-umd/deploy/compare/v1.0.2...v1.0.3) (2019-03-10)
 
 
