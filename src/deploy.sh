@@ -11,26 +11,26 @@ function die() {
 # Initialize all the option variables.
 # This ensures we are not contaminated by variables from the environment.
 installer=npm
-version=
+targetVersion=
 
 while :; do
     case $1 in
         -y|--yarn)
             installer=yarn
             ;;
-        -v|--version)       # Takes an option argument; ensure it has been specified.
+        -t|--target-version)       # Takes an option argument; ensure it has been specified.
             if [ "$2" ]; then
                 version=$2
                 shift
             else
-                die 'ERROR: "--version" requires a non-empty option argument.'
+                die 'ERROR: "--target-version" requires a non-empty option argument.'
             fi
             ;;
-        --version=?*)
+        --target-version=?*)
             version=${1#*=} # Delete everything up to "=" and assign the remainder.
             ;;
-        --version=)         # Handle the case of an empty --version=
-            die 'ERROR: "--version" requires a non-empty option argument.'
+        --target-version=)         # Handle the case of an empty --target-version=
+            die 'ERROR: "--target-version" requires a non-empty option argument.'
             ;;
         --)              # End of all options.
             shift
@@ -47,9 +47,10 @@ while :; do
 done
 
 
-if [[ ! -z ${version} ]]; then
+if [[ ! -z ${targetVersion} ]]; then
   git fetch --tags
-  git checkout refs/tags/${version}
+  git checkout refs/tags/${targetVersion}
+  echo "[Documentation] target version ${targetVersion}"
 fi
 
 if [[ ! -e $PWD/node_modules  ]]; then

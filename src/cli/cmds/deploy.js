@@ -8,10 +8,10 @@ exports.builder = (yargs) => yargs
     alias: 'y',
     describe: 'Use yarn instead of npm',
   })
-  .option('version', {
-    type: 'boolean',
-    alias: 'v',
-    describe: 'Version',
+  .option('target-version', {
+    type: 'text',
+    alias: 't',
+    describe: 'Target version',
   });
 
 exports.handler = (args) => {
