@@ -1,45 +1,18 @@
-/**
- * Code your first module here
- */
+const path = require('path');
+const { spawn } = require('child_process');
 
-export default class DemoClass {
-  static testStatic = 'This is a static test';
-
-  testAttribute = 'This is a test attribute';
-
-  state = {
-    list: ['a', 'b'],
-    isSpreadActive: true,
-    isTestLiving: true,
-  };
-
-  hasInList(value) {
-    return this.state.list.includes(value);
+module.exports = ({ yarn, version }, cb) => {
+  const args = [];
+  if (yarn) {
+    args.push('--yarn');
   }
-
-  getReplacedEnv() {
-    return process.env.NODE_ENV;
+  if (version)  {
+    args.push(`--version ${version}`);
   }
-
-  getIsSpreadActive() {
-    const { isSpreadActive, ...rest } = this.state; // eslint-disable-line no-unused-vars
-    return isSpreadActive;
-  }
-
-  getRest() {
-    const { isSpreadActive, ...rest } = this.state;
-    return rest;
-  }
-
-  getTestStatic() {
-    return DemoClass.testStatic;
-  }
-
-  getTestAttribute() {
-    return this.testAttribute;
-  }
-
-  setTestAttribute(testAttribute) {
-    this.testAttribute = testAttribute;
-  }
-}
+  const ls = spawn('bash', [path.join(__dirname, 'deploy.sh')].concat(args), { stdio: 'inherit' });
+  ls.on('close', (code) => {
+    if (cb) {
+      cb(null, code);
+    }
+  });
+};

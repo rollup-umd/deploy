@@ -19,3 +19,4 @@ package-lock.json
 /*.tgz
 .iml
 /docs/cli
+debug.json
