@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rollup-umd/deploy/compare/v1.0.0...v1.0.1) (2019-03-10)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/rollup-umd/deploy ([9bbc9fa](https://github.com/rollup-umd/deploy/commit/9bbc9fa))
+
 # 1.0.0 (2019-03-10)
 
 
