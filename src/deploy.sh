@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 
 DECLINATION_ID=$(node -p "require('./package.json').declinationId")
 
@@ -51,6 +51,8 @@ if [[ ! -z ${targetVersion} ]]; then
   git fetch --tags
   git checkout refs/tags/${targetVersion}
   echo "[Documentation] target version ${targetVersion}"
+else
+  echo ${targetVersion} was skipped
 fi
 
 if [[ ! -e $PWD/node_modules  ]]; then
