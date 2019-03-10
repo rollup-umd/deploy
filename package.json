@@ -1,6 +1,6 @@
 {
   "name": "@yeutech/deploy",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Deploy job script for rollup-umd project",
   "main": "lib/index.js",
   "bin": "lib/cli/index.js",
@@ -39,7 +39,8 @@
     "prestyleguide": "npm run jsdoc",
     "styleguide": "styleguidist server",
     "prestyleguide:build": "npm run jsdoc && ./styleguide/prepare.sh",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/deploy is deprecated, use @rollup-umd/deploy instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",
