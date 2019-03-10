@@ -1,45 +1,11 @@
-/**
- * Code your first module here
- */
+const path = require('path');
+const { spawn } = require('child_process');
 
-export default class DemoClass {
-  static testStatic = 'This is a static test';
-
-  testAttribute = 'This is a test attribute';
-
-  state = {
-    list: ['a', 'b'],
-    isSpreadActive: true,
-    isTestLiving: true,
-  };
-
-  hasInList(value) {
-    return this.state.list.includes(value);
-  }
-
-  getReplacedEnv() {
-    return process.env.NODE_ENV;
-  }
-
-  getIsSpreadActive() {
-    const { isSpreadActive, ...rest } = this.state; // eslint-disable-line no-unused-vars
-    return isSpreadActive;
-  }
-
-  getRest() {
-    const { isSpreadActive, ...rest } = this.state;
-    return rest;
-  }
-
-  getTestStatic() {
-    return DemoClass.testStatic;
-  }
-
-  getTestAttribute() {
-    return this.testAttribute;
-  }
-
-  setTestAttribute(testAttribute) {
-    this.testAttribute = testAttribute;
-  }
-}
+module.exports = (cb) => {
+  const ls = spawn('bash', [path.join(__dirname, 'deploy.sh')], { stdio: 'inherit' });
+  ls.on('close', (code) => {
+    if (cb) {
+      cb(null, code);
+    }
+  });
+};

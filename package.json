@@ -53,7 +53,7 @@
     "yeutech.vn",
     "deploy"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb-base",
@@ -194,7 +194,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "lint-staged": "^8.1.5",
     "pre-commit": "^1.2.2",
-    "react-styleguidist": "^9.0.4",
+    "react-styleguidist": "^8.0.6",
     "rollup": "^1.6.0",
     "semantic-release": "^15.13.3",
     "toctoc": "^0.3.2",
@@ -208,14 +208,14 @@
   },
   "peerDependencies": {},
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       {
         "path": "@semantic-release/exec",
@@ -297,10 +297,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "statements": 100,
-        "branches": 100,
-        "functions": 100,
-        "lines": 100
+        "statements": 0,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
       }
     },
     "moduleDirectories": [
@@ -315,5 +315,23 @@
   },
   "declinationId": "cli",
   "contributors": [],
-  "private": true
+  "transitive": {
+    "name": "deploy",
+    "scope": "rollup-umd",
+    "scopedName": "@rollup-umd/deploy",
+    "jsnext:main": "dist/@rollup-umd/deploy.esm.js",
+    "module": "dist/@rollup-umd/deploy.esm.js",
+    "homepage": "https://rollup-umd.github.io/deploy",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/rollup-umd/deploy.git"
+    },
+    "bugs": {
+      "url": "https://github.com/rollup-umd/deploy/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }
