@@ -20,14 +20,14 @@ while :; do
             ;;
         -t|--target-version)       # Takes an option argument; ensure it has been specified.
             if [ "$2" ]; then
-                version=$2
+                targetVersion=$2
                 shift
             else
                 die 'ERROR: "--target-version" requires a non-empty option argument.'
             fi
             ;;
         --target-version=?*)
-            version=${1#*=} # Delete everything up to "=" and assign the remainder.
+            targetVersion=${1#*=} # Delete everything up to "=" and assign the remainder.
             ;;
         --target-version=)         # Handle the case of an empty --target-version=
             die 'ERROR: "--target-version" requires a non-empty option argument.'
@@ -51,8 +51,6 @@ if [[ ! -z ${targetVersion} ]]; then
   git fetch --tags
   git checkout refs/tags/${targetVersion}
   echo "[Documentation] target version ${targetVersion}"
-else
-  echo ${targetVersion} was skipped
 fi
 
 if [[ ! -e $PWD/node_modules  ]]; then
