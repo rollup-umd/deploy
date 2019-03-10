@@ -7,7 +7,8 @@ module.exports = ({ yarn, targetVersion }, cb) => {
     args.push('--yarn');
   }
   if (targetVersion) {
-    args.push(`--target-version ${targetVersion}`);
+    args.push('--target-version');
+    args.push(targetVersion);
   }
   const ls = spawn('bash', [path.join(__dirname, 'deploy.sh')].concat(args), { stdio: 'inherit' });
   ls.on('close', (code) => {
