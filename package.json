@@ -314,24 +314,5 @@
     ]
   },
   "declinationId": "cli",
-  "contributors": [],
-  "transitive": {
-    "name": "deploy",
-    "scope": "rollup-umd",
-    "scopedName": "@rollup-umd/deploy",
-    "jsnext:main": "dist/@rollup-umd/deploy.esm.js",
-    "module": "dist/@rollup-umd/deploy.esm.js",
-    "homepage": "https://rollup-umd.github.io/deploy",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/rollup-umd/deploy.git"
-    },
-    "bugs": {
-      "url": "https://github.com/rollup-umd/deploy/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
-  }
+  "contributors": []
 }
