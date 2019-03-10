@@ -26,10 +26,10 @@ before_install:
     - echo "package version $PACKAGE_VERSION"
 
 stages:
+  - deploy
   - build
   - test
   - release
-  - deploy
 
 jobs:
   include:
@@ -66,11 +66,12 @@ jobs:
 
     # Job: Page
     - stage: deploy
-      if: branch = master AND type = push AND fork = false
+      if: branch = dev AND type = push AND fork = false
       node_js:
         - 'lts/*'
       script:
         - targetVersion=$(git describe --tags `git rev-list --tags --max-count=1`)
+        - echo $targetVersion
         - npx @rollup-umd/deploy --target-version ${targetVersion}
       deploy:
         - provider: pages
