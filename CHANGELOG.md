@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/rollup-umd/deploy/compare/v1.0.2...v1.0.3) (2019-03-10)
+
+
+### Bug Fixes
+
+* **deploy:** passing arguments correctly ([1c2ee20](https://github.com/rollup-umd/deploy/commit/1c2ee20))
+
 ## [1.0.2](https://github.com/rollup-umd/deploy/compare/v1.0.1...v1.0.2) (2019-03-10)
 
 
