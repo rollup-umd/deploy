@@ -46,6 +46,11 @@ while :; do
   shift
 done
 
+if [[ ${installer} = yarn ]]; then
+  echo "[Documentation] installing dependencies with ${installer}"
+  [[ $(which yarn) = "" ]] && curl -o- -L https://yarnpkg.com/install.sh | bash
+  yarn
+fi
 
 if [[ ! -z ${targetVersion} ]]; then
   git fetch --tags
@@ -55,11 +60,7 @@ fi
 
 if [[ ! -e $PWD/node_modules  ]]; then
   echo "[Documentation] installing dependencies with ${installer}"
-  if [[ ${installer} = yarn ]]; then
-    yarn
-  else
-    npm install
-  fi
+  npm install
 fi
 
 if [[ "$DECLINATION_ID" = cli  ]]; then
