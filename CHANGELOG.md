@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/rollup-umd/deploy/compare/v1.0.8...v1.0.9) (2019-03-11)
+
+
+### Bug Fixes
+
+* **yarn:** yarn will take precedence if activated ([a2ed10f](https://github.com/rollup-umd/deploy/commit/a2ed10f))
+
 ## [1.0.8](https://github.com/rollup-umd/deploy/compare/v1.0.7...v1.0.8) (2019-03-11)
 
 
