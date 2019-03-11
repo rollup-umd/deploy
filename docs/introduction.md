@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/rollup-umd/deploy.svg?branch=master)](https://travis-ci.org/rollup-umd/deploy)
-[![npm Version](https://img.shields.io/npm/v/@rollup-umd/deploy.svg?style=flat)](https://www.npmjs.com/package/@rollup-umd/deploy)
-[![License](https://img.shields.io/npm/l/@rollup-umd/deploy.svg?style=flat)](https://www.npmjs.com/package/@rollup-umd/deploy)
-[![npm Version](https://img.shields.io/node/v/@rollup-umd/deploy.svg?style=flat)](https://www.npmjs.com/package/@rollup-umd/deploy)
-[![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@rollup-umd/deploy)
+[![build status](/badges/$PACKAGE_VERSION/build.svg)](/commits/$PACKAGE_VERSION)
+[![coverage report](/badges/$PACKAGE_VERSION/coverage.svg)](/commits/$PACKAGE_VERSION)
 
+![image](https://img.shields.io/badge/version-$PACKAGE_VERSION-green.svg)
+![image](https://img.shields.io/badge/node-$NODE_VERSION-brightgreen.svg)
+![image](https://img.shields.io/badge/npm-$NPM_VERSION-red.svg)
+![image](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![image](https://img.shields.io/badge/publishing-private-red.svg)
 
-$PACKAGE_DESCRIPTION
+$PACKAGE_DESCRIPTION.

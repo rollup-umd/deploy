@@ -11,27 +11,20 @@
       "content": "docs/introduction.md"
     },
     {
-      "name": "Prerequisite",
-      "content": "docs/prerequisite.md"
+      "name": "Installation",
+      "content": "docs/installation.md"
     },
     {
       "name": "Getting started",
-      "content": "docs/getting-started.md",
-      "sections": [
-        {
-          "name": "Installation",
-          "content": "docs/installation.md"
-        },
-        {
-          "name": "Configuration",
-          "content": "docs/configuration.md"
-        }
-      ]
+      "content": "docs/getting-started.md"
     },
     {
-      "name": "JSdoc",
-      "description": "This part is generated from the JSdoc annotations in the source code.",
-      "content": "docs/js/jsdoc.md"
+      "name": "CLI commands",
+      "sections": []
+    },
+    {
+      "name": "Configuration",
+      "content": "docs/configuration.md"
     },
     {
       "name": "FAQ",
@@ -46,18 +39,14 @@
           "content": "docs/commands.md"
         },
         {
+          "name": "Branches",
+          "content": "docs/branches.md"
+        },
+        {
           "name": "Release",
           "content": "docs/release.md"
         }
       ]
-    },
-    {
-      "name": "Changelog",
-      "content": "CHANGELOG.md"
-    },
-    {
-      "name": "Code of conduct",
-      "content": "CODE_OF_CONDUCT.md"
     }
   ],
   "ribbon": {

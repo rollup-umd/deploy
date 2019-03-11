@@ -14,36 +14,36 @@ installer=npm
 targetVersion=
 
 while :; do
-    case $1 in
-        -y|--yarn)
-            installer=yarn
-            ;;
-        -t|--target-version)       # Takes an option argument; ensure it has been specified.
-            if [ "$2" ]; then
-                targetVersion=$2
-                shift
-            else
-                die 'ERROR: "--target-version" requires a non-empty option argument.'
-            fi
-            ;;
-        --target-version=?*)
-            targetVersion=${1#*=} # Delete everything up to "=" and assign the remainder.
-            ;;
-        --target-version=)         # Handle the case of an empty --target-version=
-            die 'ERROR: "--target-version" requires a non-empty option argument.'
-            ;;
-        --)              # End of all options.
-            shift
-            break
-            ;;
-        -?*)
-            printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
-            ;;
-        *)               # Default case: No more options, so break out of the loop.
-            break
-    esac
+  case $1 in
+    -y|--yarn)
+      installer=yarn
+      ;;
+    -t|--target-version)       # Takes an option argument; ensure it has been specified.
+      if [ "$2" ]; then
+        targetVersion=$2
+        shift
+      else
+        die 'ERROR: "--target-version" requires a non-empty option argument.'
+      fi
+      ;;
+    --target-version=?*)
+      targetVersion=${1#*=} # Delete everything up to "=" and assign the remainder.
+      ;;
+    --target-version=)         # Handle the case of an empty --target-version=
+      die 'ERROR: "--target-version" requires a non-empty option argument.'
+      ;;
+    --)              # End of all options.
+      shift
+      break
+      ;;
+    -?*)
+      printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+      ;;
+    *)               # Default case: No more options, so break out of the loop.
+      break
+  esac
 
-    shift
+  shift
 done
 
 
