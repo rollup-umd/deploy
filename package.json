@@ -1,6 +1,6 @@
 {
   "name": "@rollup-umd/deploy",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Deploy job script for rollup-umd project",
   "main": "lib/index.js",
   "bin": "lib/cli/index.js",

@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/rollup-umd/deploy/compare/v1.0.7...v1.0.8) (2019-03-11)
+
+
+### Bug Fixes
+
+* **documentation:** fixing documentation ([6258b17](https://github.com/rollup-umd/deploy/commit/6258b17))
+
 ## [1.0.7](https://github.com/rollup-umd/deploy/compare/v1.0.6...v1.0.7) (2019-03-11)
 
 
