@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/rollup-umd/deploy/compare/v1.0.9...v1.1.0) (2019-03-21)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies ([618afb0](https://github.com/rollup-umd/deploy/commit/618afb0))
+
+
+### Features
+
+* **prerequisite:** It will remove prerequesite section when no peerDependencies are found ([bd7436a](https://github.com/rollup-umd/deploy/commit/bd7436a))
+
 ## [1.0.9](https://github.com/rollup-umd/deploy/compare/v1.0.8...v1.0.9) (2019-03-11)
 
 
