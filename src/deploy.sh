@@ -77,6 +77,14 @@ if [[ -e $PWD/styleguide/prepare.sh ]]; then
   chmod +x $PWD/styleguide/prepare.sh
   $PWD/styleguide/prepare.sh
 fi
+
+# remove prerequesite section if no peer dependencies are found
+if [[ $(cat package.json | jq '.peerDependencies | length') = 0 ]]; then
+  echo "Remove page prerequesite as no peer dependencies were found"
+  jq '.sections |= map(select(.name != "Prerequisite"))' styleguide/styleguide.ext.json > styleguide/styleguide.ext.json.tmp$$
+  mv styleguide/styleguide.ext.json.tmp$$ styleguide/styleguide.ext.json
+fi
+
 if [[ ! -e $PWD/public ]]; then
   echo "[Documentation] build documentation"
   npm run styleguide:build
