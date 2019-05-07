@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+[ -v DEBUG ] && set -x
 
 DECLINATION_ID=$(node -p "require('./package.json').declinationId")
 
