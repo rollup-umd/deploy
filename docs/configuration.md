@@ -9,3 +9,5 @@ You can tell the script to use `yarn` for installation:
 ```bash
 $ npx $PACKAGE_NAME --yarn
 ```
+
+Set `DEBUG` environment variable to enable debug output.
