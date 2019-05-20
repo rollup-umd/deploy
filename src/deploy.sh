@@ -66,7 +66,13 @@ fi
 
 if [[ "$DECLINATION_ID" = cli  ]]; then
   echo "[Documentation] generating CLI documentation"
-  npx @yeutech-lab/rollup-umd-documentation-cli
+  if [[ ${NO_NPX} = true ]]; then
+    npm install -g @yeutech-lab/rollup-umd-documentation-cli
+    rollup-umd-documentation-cli
+    npm uninstall -g @yeutech-lab/rollup-umd-documentation-cli
+  else
+    npx @yeutech-lab/rollup-umd-documentation-cli
+  fi
 fi
 if [[ -e $PWD/styleguide/jsdoc.sh ]]; then
   echo "[Documentation] running jsdoc"
