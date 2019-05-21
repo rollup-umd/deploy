@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/rollup-umd/deploy/compare/v1.1.1...v1.2.0) (2019-05-21)
+
+
+### Features
+
+* **deploy:** added NO_NPX env ([03945bb](https://github.com/rollup-umd/deploy/commit/03945bb))
+
 ## [1.1.1](https://github.com/rollup-umd/deploy/compare/v1.1.0...v1.1.1) (2019-05-07)
 
 
