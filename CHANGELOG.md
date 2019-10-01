@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/rollup-umd/deploy/compare/v1.2.0...v1.2.1) (2019-10-01)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies ([d3eb65e](https://github.com/rollup-umd/deploy/commit/d3eb65e))
+* **deploy:** remove prerequisite only if needed ([ecb2c09](https://github.com/rollup-umd/deploy/commit/ecb2c09))
+
 # [1.2.0](https://github.com/rollup-umd/deploy/compare/v1.1.1...v1.2.0) (2019-05-21)
 
 
