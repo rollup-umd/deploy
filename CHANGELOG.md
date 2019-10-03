@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/rollup-umd/deploy/compare/v1.2.1...v1.2.2) (2019-10-03)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies ([3d50110](https://github.com/rollup-umd/deploy/commit/3d50110))
+* **install:** install dependencies when no node_modules is found ([595e3b6](https://github.com/rollup-umd/deploy/commit/595e3b6))
+
 ## [1.2.1](https://github.com/rollup-umd/deploy/compare/v1.2.0...v1.2.1) (2019-10-01)
 
 
