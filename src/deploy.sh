@@ -47,21 +47,22 @@ while :; do
   shift
 done
 
-if [[ ${installer} = yarn ]]; then
-  echo "[Documentation] installing dependencies with ${installer}"
-  [[ $(which yarn) = "" ]] && curl -o- -L https://yarnpkg.com/install.sh | bash
-  yarn
-fi
-
 if [[ ! -z ${targetVersion} ]]; then
   git fetch --tags
   git checkout refs/tags/${targetVersion}
   echo "[Documentation] target version ${targetVersion}"
 fi
 
-if [[ ! -e $PWD/node_modules  ]]; then
+if [[ ! -d $PWD/node_modules ]]; then
   echo "[Documentation] installing dependencies with ${installer}"
-  npm install
+  if [[ ${installer} = yarn ]]; then
+    [[ $(which yarn) = "" ]] && curl -o- -L https://yarnpkg.com/install.sh | bash
+    yarn
+  else
+    npm install
+  fi
+else
+  echo "Skipping ${installer} install"
 fi
 
 if [[ "$DECLINATION_ID" = cli  ]]; then
