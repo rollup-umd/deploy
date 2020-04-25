@@ -54,9 +54,9 @@ if [[ ! -z ${targetVersion} ]]; then
 fi
 
 if [[ ! -d $PWD/node_modules ]]; then
-  echo "[Documentation] installing dependencies with ${installer}"
+  echo "Installing dependencies with ${installer}"
   if [[ ${installer} = yarn ]]; then
-    [[ $(which yarn) = "" ]] && curl -o- -L https://yarnpkg.com/install.sh | bash
+    [[ $(which yarn) = "" ]] && export PATH=$HOME/.yarn/bin:$PATH && curl -o- -L https://yarnpkg.com/install.sh | bash
     yarn
   else
     npm install
