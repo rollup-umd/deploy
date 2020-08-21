@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/rollup-umd/deploy/compare/v1.2.4...v1.2.5) (2020-08-21)
+
+
+### Bug Fixes
+
+* **documentation:** force to build the doc at the end ([01c7ca6](https://github.com/rollup-umd/deploy/commit/01c7ca650207d5a33cf2e0586baea1fd92fcd347))
+
 ## [1.2.4](https://github.com/rollup-umd/deploy/compare/v1.2.3...v1.2.4) (2020-04-25)
 
 
