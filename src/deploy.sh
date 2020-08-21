@@ -100,7 +100,5 @@ if [[ $(cat package.json | jq '.peerDependencies | length') = 0 ]]; then
   fi
 fi
 
-if [[ ! -e $PWD/public ]]; then
-  echo "[Documentation] build documentation"
-  npm run styleguide:build
-fi
+echo "[Documentation] build documentation"
+npm run styleguide:build
